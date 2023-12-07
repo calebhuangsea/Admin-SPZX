@@ -1,0 +1,470 @@
+2023-12-04 23:15:42 Starting ManagerApplication using Java 17.0.8.1 with PID 5397 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-04 23:15:42 The following 1 profile is active: "dev"
+2023-12-04 23:15:43 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-04 23:15:43 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-04 23:15:43 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-04 23:15:43 Tomcat initialized with port(s): 8501 (http)
+2023-12-04 23:15:43 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-04 23:15:43 Starting service [Tomcat]
+2023-12-04 23:15:43 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-04 23:15:43 Initializing Spring embedded WebApplicationContext
+2023-12-04 23:15:43 Root WebApplicationContext: initialization completed in 650 ms
+2023-12-04 23:15:44 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-04 23:15:44 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-04 23:15:44 Started ManagerApplication in 1.623 seconds (process running for 2.108)
+2023-12-04 23:17:05 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 23:17:05 Initializing Servlet 'dispatcherServlet'
+2023-12-04 23:17:05 Completed initialization in 4 ms
+2023-12-04 23:17:05 Init duration for springdoc-openapi is: 73 ms
+2023-12-04 23:18:59 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.atguigu.spzx.manager.mapper.SysUserMapper.selectUserInfoByUserName
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:108)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at org.apache.ibatis.util.MapUtil.computeIfAbsent(MapUtil.java:35)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:95)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy2/jdk.proxy2.$Proxy76.selectUserInfoByUserName(Unknown Source)
+	at com.atguigu.spzx.manager.service.impl.SysUserServiceImpl.login(SysUserServiceImpl.java:29)
+	at com.atguigu.spzx.manager.controller.IndexController.login(IndexController.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-04 23:20:08 Starting ManagerApplication using Java 17.0.8.1 with PID 5505 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-04 23:20:08 The following 1 profile is active: "dev"
+2023-12-04 23:20:08 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-04 23:20:08 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-04 23:20:08 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-04 23:20:09 Tomcat initialized with port(s): 8501 (http)
+2023-12-04 23:20:09 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-04 23:20:09 Starting service [Tomcat]
+2023-12-04 23:20:09 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-04 23:20:09 Initializing Spring embedded WebApplicationContext
+2023-12-04 23:20:09 Root WebApplicationContext: initialization completed in 529 ms
+2023-12-04 23:20:09 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-04 23:20:09 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-04 23:20:09 Started ManagerApplication in 1.447 seconds (process running for 1.866)
+2023-12-04 23:20:10 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-04 23:20:10 Initializing Servlet 'dispatcherServlet'
+2023-12-04 23:20:10 Completed initialization in 0 ms
+2023-12-04 23:20:11 Init duration for springdoc-openapi is: 69 ms
+2023-12-04 23:20:15 HikariPool-1 - Starting...
+2023-12-04 23:20:15 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e825e12
+2023-12-04 23:20:15 HikariPool-1 - Start completed.
+2023-12-04 23:20:15 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis] with root cause
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-04 23:23:47 HikariPool-1 - Shutdown initiated...
+2023-12-04 23:23:47 HikariPool-1 - Shutdown completed.
+2023-12-05 21:37:19 Starting ManagerApplication using Java 17.0.8.1 with PID 19901 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 21:37:19 The following 1 profile is active: "dev"
+2023-12-05 21:37:19 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 21:37:19 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 21:37:19 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-05 21:37:19 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 21:37:19 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:37:19 Starting service [Tomcat]
+2023-12-05 21:37:19 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 21:37:19 Initializing Spring embedded WebApplicationContext
+2023-12-05 21:37:19 Root WebApplicationContext: initialization completed in 578 ms
+2023-12-05 21:37:20 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:37:20 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 21:37:20 Started ManagerApplication in 1.716 seconds (process running for 2.061)
+2023-12-05 21:37:58 Starting ManagerApplication using Java 17.0.8.1 with PID 19910 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 21:37:58 The following 1 profile is active: "dev"
+2023-12-05 21:37:58 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 21:37:58 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 21:37:58 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-05 21:37:59 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 21:37:59 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:37:59 Starting service [Tomcat]
+2023-12-05 21:37:59 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 21:37:59 Initializing Spring embedded WebApplicationContext
+2023-12-05 21:37:59 Root WebApplicationContext: initialization completed in 567 ms
+2023-12-05 21:37:59 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:37:59 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 21:37:59 Started ManagerApplication in 1.458 seconds (process running for 1.791)
+2023-12-05 21:38:13 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 21:38:13 Initializing Servlet 'dispatcherServlet'
+2023-12-05 21:38:13 Completed initialization in 3 ms
+2023-12-05 21:38:13 Init duration for springdoc-openapi is: 72 ms
+2023-12-05 21:39:55 Starting ManagerApplication using Java 17.0.8.1 with PID 19938 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 21:39:55 The following 1 profile is active: "dev"
+2023-12-05 21:39:56 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 21:39:56 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 21:39:56 Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2023-12-05 21:39:56 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 21:39:56 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:39:56 Starting service [Tomcat]
+2023-12-05 21:39:56 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 21:39:56 Initializing Spring embedded WebApplicationContext
+2023-12-05 21:39:56 Root WebApplicationContext: initialization completed in 682 ms
+2023-12-05 21:39:57 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:39:57 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 21:39:57 Started ManagerApplication in 1.54 seconds (process running for 1.983)
+2023-12-05 21:40:02 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 21:40:02 Initializing Servlet 'dispatcherServlet'
+2023-12-05 21:40:02 Completed initialization in 2 ms
+2023-12-05 21:40:03 Init duration for springdoc-openapi is: 245 ms
+2023-12-05 21:41:11 HikariPool-1 - Starting...
+2023-12-05 21:41:11 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33b89182
+2023-12-05 21:41:11 HikariPool-1 - Start completed.
+2023-12-05 21:41:14 Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: 密码不正确] with root cause
+java.lang.RuntimeException: 密码不正确
+	at com.atguigu.spzx.manager.service.impl.SysUserServiceImpl.login(SysUserServiceImpl.java:40)
+	at com.atguigu.spzx.manager.controller.IndexController.login(IndexController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:563)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-12-05 21:55:34 HikariPool-1 - Shutdown initiated...
+2023-12-05 21:55:34 HikariPool-1 - Shutdown completed.
+2023-12-05 21:55:50 Starting ManagerApplication using Java 17.0.8.1 with PID 20169 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 21:55:50 The following 1 profile is active: "dev"
+2023-12-05 21:55:51 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 21:55:51 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 21:55:51 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-05 21:55:51 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 21:55:51 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:55:51 Starting service [Tomcat]
+2023-12-05 21:55:51 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 21:55:51 Initializing Spring embedded WebApplicationContext
+2023-12-05 21:55:51 Root WebApplicationContext: initialization completed in 586 ms
+2023-12-05 21:55:52 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 21:55:52 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 21:55:52 Started ManagerApplication in 1.446 seconds (process running for 1.93)
+2023-12-05 21:55:58 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 21:55:58 Initializing Servlet 'dispatcherServlet'
+2023-12-05 21:55:58 Completed initialization in 2 ms
+2023-12-05 21:55:58 Init duration for springdoc-openapi is: 79 ms
+2023-12-05 21:56:03 HikariPool-1 - Starting...
+2023-12-05 21:56:03 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6459260a
+2023-12-05 21:56:03 HikariPool-1 - Start completed.
+2023-12-05 22:09:26 HikariPool-1 - Shutdown initiated...
+2023-12-05 22:09:26 HikariPool-1 - Shutdown completed.
+2023-12-05 22:09:30 Starting ManagerApplication using Java 17.0.8.1 with PID 20824 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 22:09:30 The following 1 profile is active: "dev"
+2023-12-05 22:09:31 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 22:09:31 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 22:09:31 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-05 22:09:31 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 22:09:31 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:09:31 Starting service [Tomcat]
+2023-12-05 22:09:31 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 22:09:31 Initializing Spring embedded WebApplicationContext
+2023-12-05 22:09:31 Root WebApplicationContext: initialization completed in 732 ms
+2023-12-05 22:09:32 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:09:32 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 22:09:32 Started ManagerApplication in 1.917 seconds (process running for 2.413)
+2023-12-05 22:09:38 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 22:09:38 Initializing Servlet 'dispatcherServlet'
+2023-12-05 22:09:38 Completed initialization in 3 ms
+2023-12-05 22:34:45 Starting ManagerApplication using Java 17.0.8.1 with PID 21612 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 22:34:45 The following 1 profile is active: "dev"
+2023-12-05 22:34:46 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 22:34:46 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 22:34:46 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-05 22:34:46 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 22:34:46 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:34:46 Starting service [Tomcat]
+2023-12-05 22:34:46 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 22:34:46 Initializing Spring embedded WebApplicationContext
+2023-12-05 22:34:46 Root WebApplicationContext: initialization completed in 650 ms
+2023-12-05 22:34:46 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:34:46 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 22:34:46 Started ManagerApplication in 1.626 seconds (process running for 2.252)
+2023-12-05 22:34:48 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 22:34:48 Initializing Servlet 'dispatcherServlet'
+2023-12-05 22:34:48 Completed initialization in 6 ms
+2023-12-05 22:44:59 HikariPool-1 - Starting...
+2023-12-05 22:44:59 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10394128
+2023-12-05 22:44:59 HikariPool-1 - Start completed.
+2023-12-05 22:45:10 HikariPool-1 - Shutdown initiated...
+2023-12-05 22:45:10 HikariPool-1 - Shutdown completed.
+2023-12-05 22:45:14 Starting ManagerApplication using Java 17.0.8.1 with PID 21949 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 22:45:14 The following 1 profile is active: "dev"
+2023-12-05 22:45:15 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 22:45:15 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 22:45:15 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-12-05 22:45:15 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 22:45:15 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:45:15 Starting service [Tomcat]
+2023-12-05 22:45:15 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 22:45:15 Initializing Spring embedded WebApplicationContext
+2023-12-05 22:45:15 Root WebApplicationContext: initialization completed in 639 ms
+2023-12-05 22:45:16 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:45:16 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 22:45:16 Started ManagerApplication in 1.676 seconds (process running for 2.461)
+2023-12-05 22:45:21 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 22:45:21 Initializing Servlet 'dispatcherServlet'
+2023-12-05 22:45:21 Completed initialization in 2 ms
+2023-12-05 22:45:24 HikariPool-1 - Starting...
+2023-12-05 22:45:24 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ac25fce
+2023-12-05 22:45:24 HikariPool-1 - Start completed.
+2023-12-05 22:46:16 HikariPool-1 - Shutdown initiated...
+2023-12-05 22:46:16 HikariPool-1 - Shutdown completed.
+2023-12-05 22:46:19 Starting ManagerApplication using Java 17.0.8.1 with PID 21973 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 22:46:19 The following 1 profile is active: "dev"
+2023-12-05 22:46:19 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 22:46:19 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 22:46:19 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-05 22:46:20 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 22:46:20 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:46:20 Starting service [Tomcat]
+2023-12-05 22:46:20 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 22:46:20 Initializing Spring embedded WebApplicationContext
+2023-12-05 22:46:20 Root WebApplicationContext: initialization completed in 558 ms
+2023-12-05 22:46:20 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:46:20 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 22:46:20 Started ManagerApplication in 1.458 seconds (process running for 1.699)
+2023-12-05 22:46:23 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 22:46:23 Initializing Servlet 'dispatcherServlet'
+2023-12-05 22:46:23 Completed initialization in 2 ms
+2023-12-05 22:46:25 HikariPool-1 - Starting...
+2023-12-05 22:46:26 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50c1d1f8
+2023-12-05 22:46:26 HikariPool-1 - Start completed.
+2023-12-05 22:46:40 HikariPool-1 - Shutdown initiated...
+2023-12-05 22:46:40 HikariPool-1 - Shutdown completed.
+2023-12-05 22:46:43 Starting ManagerApplication using Java 17.0.8.1 with PID 22000 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-05 22:46:43 The following 1 profile is active: "dev"
+2023-12-05 22:46:44 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-05 22:46:44 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-05 22:46:44 Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2023-12-05 22:46:44 Tomcat initialized with port(s): 8501 (http)
+2023-12-05 22:46:44 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:46:44 Starting service [Tomcat]
+2023-12-05 22:46:44 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-05 22:46:44 Initializing Spring embedded WebApplicationContext
+2023-12-05 22:46:44 Root WebApplicationContext: initialization completed in 603 ms
+2023-12-05 22:46:44 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-05 22:46:44 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-05 22:46:44 Started ManagerApplication in 1.457 seconds (process running for 1.67)
+2023-12-05 22:46:46 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-05 22:46:46 Initializing Servlet 'dispatcherServlet'
+2023-12-05 22:46:46 Completed initialization in 2 ms
+2023-12-06 21:34:46 Starting ManagerApplication using Java 17.0.8.1 with PID 33652 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-06 21:34:46 The following 1 profile is active: "dev"
+2023-12-06 21:34:47 Starting ManagerApplication using Java 17.0.8.1 with PID 33658 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-06 21:34:47 The following 1 profile is active: "dev"
+2023-12-06 21:34:47 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-06 21:34:47 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-06 21:34:47 Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2023-12-06 21:34:47 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-06 21:34:47 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-06 21:34:47 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-12-06 21:34:48 Tomcat initialized with port(s): 8501 (http)
+2023-12-06 21:34:48 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:34:48 Starting service [Tomcat]
+2023-12-06 21:34:48 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-06 21:34:48 Tomcat initialized with port(s): 8501 (http)
+2023-12-06 21:34:48 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:34:48 Starting service [Tomcat]
+2023-12-06 21:34:48 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-06 21:34:48 Initializing Spring embedded WebApplicationContext
+2023-12-06 21:34:48 Root WebApplicationContext: initialization completed in 1343 ms
+2023-12-06 21:34:48 Initializing Spring embedded WebApplicationContext
+2023-12-06 21:34:48 Root WebApplicationContext: initialization completed in 1046 ms
+2023-12-06 21:34:49 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:34:49 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:34:49 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-06 21:34:49 Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-12-06 21:34:49 Started ManagerApplication in 2.472 seconds (process running for 2.888)
+2023-12-06 21:34:49 Pausing ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:34:49 Stopping service [Tomcat]
+2023-12-06 21:34:49 Stopping ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:34:49 Destroying ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:34:49 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-06 21:34:49 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8501 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8501 or configure this application to listen on another port.
+
+2023-12-06 21:35:08 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 21:35:08 Initializing Servlet 'dispatcherServlet'
+2023-12-06 21:35:08 Completed initialization in 3 ms
+2023-12-06 21:44:17 HikariPool-1 - Starting...
+2023-12-06 21:44:18 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73685d1a
+2023-12-06 21:44:18 HikariPool-1 - Start completed.
+2023-12-06 21:50:12 HikariPool-1 - Shutdown initiated...
+2023-12-06 21:50:12 HikariPool-1 - Shutdown completed.
+2023-12-06 21:50:17 Starting ManagerApplication using Java 17.0.8.1 with PID 34335 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-06 21:50:17 The following 1 profile is active: "dev"
+2023-12-06 21:50:18 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-06 21:50:18 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-06 21:50:18 Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2023-12-06 21:50:18 Tomcat initialized with port(s): 8501 (http)
+2023-12-06 21:50:18 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:50:18 Starting service [Tomcat]
+2023-12-06 21:50:18 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-06 21:50:18 Initializing Spring embedded WebApplicationContext
+2023-12-06 21:50:18 Root WebApplicationContext: initialization completed in 599 ms
+2023-12-06 21:50:19 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:50:19 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-06 21:50:19 Started ManagerApplication in 1.578 seconds (process running for 1.925)
+2023-12-06 21:50:23 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 21:50:23 Initializing Servlet 'dispatcherServlet'
+2023-12-06 21:50:23 Completed initialization in 8 ms
+2023-12-06 21:51:29 HikariPool-1 - Starting...
+2023-12-06 21:51:29 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38fe6e2b
+2023-12-06 21:51:29 HikariPool-1 - Start completed.
+2023-12-06 21:52:07 HikariPool-1 - Shutdown initiated...
+2023-12-06 21:52:07 HikariPool-1 - Shutdown completed.
+2023-12-06 21:52:11 Starting ManagerApplication using Java 17.0.8.1 with PID 34410 (/Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent/spzx-manager/target/classes started by caleb in /Users/caleb/Desktop/Coding/projects/Admin-SPZX/spzx-parent)
+2023-12-06 21:52:11 The following 1 profile is active: "dev"
+2023-12-06 21:52:11 Multiple Spring Data modules found, entering strict repository configuration mode
+2023-12-06 21:52:11 Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-12-06 21:52:11 Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-12-06 21:52:11 Tomcat initialized with port(s): 8501 (http)
+2023-12-06 21:52:11 Initializing ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:52:11 Starting service [Tomcat]
+2023-12-06 21:52:11 Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-12-06 21:52:11 Initializing Spring embedded WebApplicationContext
+2023-12-06 21:52:11 Root WebApplicationContext: initialization completed in 794 ms
+2023-12-06 21:52:12 Starting ProtocolHandler ["http-nio-8501"]
+2023-12-06 21:52:12 Tomcat started on port(s): 8501 (http) with context path ''
+2023-12-06 21:52:12 Started ManagerApplication in 2.011 seconds (process running for 2.31)
+2023-12-06 21:52:17 Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-06 21:52:17 Initializing Servlet 'dispatcherServlet'
+2023-12-06 21:52:17 Completed initialization in 4 ms
+2023-12-06 21:52:55 HikariPool-1 - Starting...
+2023-12-06 21:52:55 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6fecee19
+2023-12-06 21:52:55 HikariPool-1 - Start completed.
+2023-12-06 22:53:27 Reconnecting, last destination was localhost/127.0.0.1:6379
+2023-12-06 22:53:27 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:53:36 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:53:36 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:53:44 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:53:44 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:54:01 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:54:01 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:54:31 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:54:31 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:55:01 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:55:01 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:55:31 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:55:31 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:56:01 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:56:01 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:56:31 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:56:31 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:57:01 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:57:01 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
+2023-12-06 22:57:31 Reconnecting, last destination was localhost/<unresolved>:6379
+2023-12-06 22:57:31 Cannot reconnect to [localhost/<unresolved>:6379]: Connection refused: localhost/127.0.0.1:6379
